@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+# name used as host
+  name: redis
+spec:
+  selector:
+    role: redis-role
+    app: demo-app
+  ports:
+    - port: 6379
